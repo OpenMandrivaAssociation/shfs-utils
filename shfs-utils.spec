@@ -1,7 +1,7 @@
 %define	module	shfs
 %define	name	%{module}-utils
 %define	version	0.35
-%define	release	1mdk
+%define	release	%mkrel 2
 
 Summary:	Tools for (Secure) SHell File System module.
 Name:		%{name}
@@ -21,17 +21,17 @@ This package contains mount/umount utility for shfs kernel module.
 %setup -q -n %{module}-%{version}
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS -I- -I. -I../shfs/Linux-2.4/ -DSHFS_VERSION=\"%{version}\"" utils
+%make CFLAGS="%{optflags} -I- -I. -I../shfs/Linux-2.4/ -DSHFS_VERSION=\"%{version}\"" utils
 make docs-install ROOT=. HTML_DOC_DIR=doc docs-install
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make ROOT=$RPM_BUILD_ROOT HTML_DOC_DIR=/doc MAN_PAGE_DIR=%{_mandir} utils-install docs-install
+rm -rf %{buildroot}
+make ROOT=%{buildroot} HTML_DOC_DIR=/doc MAN_PAGE_DIR=%{_mandir} utils-install docs-install
 rm -rf doc
-mv $RPM_BUILD_ROOT/doc .
+mv %{buildroot}/doc .
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
