@@ -3,7 +3,7 @@
 %define	version	0.35
 %define	release	%mkrel 2
 
-Summary:	Tools for (Secure) SHell File System module.
+Summary:	Tools for (Secure) SHell File System module
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
