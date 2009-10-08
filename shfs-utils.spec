@@ -21,7 +21,7 @@ This package contains mount/umount utility for shfs kernel module.
 %setup -q -n %{module}-%{version}
 
 %build
-%make CFLAGS="%{optflags} -I- -I. -I../shfs/Linux-2.4/ -DSHFS_VERSION=\"%{version}\"" utils
+%make CFLAGS="%{optflags} -iquote -I. -I../shfs/Linux-2.4/ -DSHFS_VERSION=\"%{version}\"" utils
 make docs-install ROOT=. HTML_DOC_DIR=doc docs-install
 
 %install
