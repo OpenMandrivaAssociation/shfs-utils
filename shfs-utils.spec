@@ -42,3 +42,39 @@ rm -rf %{buildroot}
 /sbin/mount.shfs
 %{_mandir}/man8/shfsmount.8*
 %{_mandir}/man8/shfsumount.8*
+
+
+%changelog
+* Thu Oct 08 2009 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 0.35-6mdv2010.0
++ Revision: 456209
+- Rebuild for updated changelog.
+
+* Thu Oct 08 2009 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 0.35-5mdv2010.0
++ Revision: 456172
+- Don't use deprecated -I- option while building (use -iquote).
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.35-4mdv2009.0
++ Revision: 269248
+- rebuild early 2009.0 package (before pixel changes)
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 0.35-2mdv2008.1
++ Revision: 140792
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+    - fix summary-ended-with-dot
+
+* Sat Jun 23 2007 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.35-2mdv2008.0
++ Revision: 43501
+- rebuild (closes #31553)
+- Import shfs-utils
+
+
+
+* Mon Aug 02 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 0.35-1mdk
+- inital mdk release
