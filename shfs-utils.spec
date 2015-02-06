@@ -1,7 +1,7 @@
 %define	module	shfs
 %define	name	%{module}-utils
 %define	version	0.35
-%define	release	%mkrel 6
+%define release	7
 
 Summary:	Tools for (Secure) SHell File System module
 Name:		%{name}
