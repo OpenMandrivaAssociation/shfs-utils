@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Kernel and hardware
-Url:		http://shfs.sourceforge.net/
+Url:		https://shfs.sourceforge.net/
 Source0:	http://atrey.karlin.mff.cuni.cz/~qiq/src/shfs/%{module}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
