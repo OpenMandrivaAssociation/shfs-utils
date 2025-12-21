@@ -13,6 +13,7 @@ Url:		https://shfs.sourceforge.net/
 Source0:	http://atrey.karlin.mff.cuni.cz/~qiq/src/shfs/%{module}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	make
 %description
 Mount shares from remote hosts using plain ssh/rsh connection.i
 This package contains mount/umount utility for shfs kernel module.
